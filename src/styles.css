@@ -124,6 +124,43 @@ h2 em {
   transition: right .3s ease;
 }
 .nav__links a:hover::after { right: 0; }
+.nav__toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.nav__toggle-lines,
+.nav__toggle-lines::before,
+.nav__toggle-lines::after {
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: currentColor;
+  transition: transform .28s ease;
+}
+.nav__toggle-lines { position: relative; }
+.nav__toggle-lines::before,
+.nav__toggle-lines::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.nav__toggle-lines::before { top: -7px; }
+.nav__toggle-lines::after { top: 7px; }
+.nav.is-open .nav__toggle-lines { background: transparent; }
+.nav.is-open .nav__toggle-lines::before { top: 0; transform: rotate(45deg); }
+.nav.is-open .nav__toggle-lines::after { top: 0; transform: rotate(-45deg); }
+.nav__toggle:focus-visible {
+  outline: 1px solid white;
+  outline-offset: 3px;
+}
 .hero__content {
   position: absolute;
   z-index: 2;
@@ -768,8 +805,39 @@ h2 em {
 }
 
 @media (max-width: 640px) {
-  .nav { padding: 24px 20px; }
-  .nav__links a:not(:last-child) { display: none; }
+  .nav { padding: 14px 20px; }
+  .nav__links { flex-direction: column; gap: 0; }
+  .nav__links a {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .14);
+    font-size: 12px;
+    letter-spacing: .22em;
+  }
+  .nav__links a:last-child { border-bottom: 0; color: var(--accent); }
+  .nav__links a::after { display: none; }
+  html:not(.js) .nav { flex-wrap: wrap; }
+  html:not(.js) .nav__links { flex-basis: 100%; padding-top: 8px; }
+  html.js .nav__toggle { display: flex; }
+  html.js .nav__links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 4px 28px 14px;
+    background: rgba(0, 0, 0, .9);
+    border-bottom: 1px solid rgba(255, 255, 255, .35);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity .25s ease, transform .25s ease, visibility .25s;
+  }
+  html.js .nav.is-open .nav__links {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    pointer-events: auto;
+  }
   .hero {
     min-height: 700px;
     background-image: url("assets/portada-900.webp");

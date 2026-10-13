@@ -14,7 +14,10 @@
   <header class="hero" id="inicio">
     <nav class="nav" aria-label="Navegación principal">
       <a class="nav__monogram" href="#inicio" aria-label="Volver al inicio">V<span>&</span>A</a>
-      <div class="nav__links">
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+        <span class="nav__toggle-lines" aria-hidden="true"></span>
+      </button>
+      <div class="nav__links" id="nav-menu">
         <a href="#detalles">Lugar</a>
         <a href="#itinerario">Itinerario</a>
         <a href="#informacion">Información</a>

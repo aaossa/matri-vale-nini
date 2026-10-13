@@ -1,3 +1,5 @@
+document.documentElement.classList.add("js");
+
 const weddingDate = new Date("2027-01-22T18:30:00-03:00");
 
 function updateCountdown() {
@@ -49,6 +51,40 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     target.scrollIntoView({ behavior: "smooth" });
   });
 });
+
+const nav = document.querySelector(".nav");
+const navToggle = nav?.querySelector(".nav__toggle");
+const navMenu = nav?.querySelector(".nav__links");
+const navMedia = window.matchMedia("(max-width: 640px)");
+
+function setNavOpen(open) {
+  if (!nav || !navToggle || !navMenu) return;
+  const isOpen = navMedia.matches && open;
+  nav.classList.toggle("is-open", isOpen);
+  navToggle.setAttribute("aria-expanded", String(isOpen));
+  navToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+  navMenu.inert = navMedia.matches && !isOpen;
+}
+
+navToggle?.addEventListener("click", () => {
+  setNavOpen(navToggle.getAttribute("aria-expanded") !== "true");
+});
+
+nav?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => setNavOpen(false));
+});
+
+document.addEventListener("click", (event) => {
+  if (!nav?.classList.contains("is-open") || nav.contains(event.target)) return;
+  setNavOpen(false);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && nav?.classList.contains("is-open")) setNavOpen(false);
+});
+
+navMedia.addEventListener("change", () => setNavOpen(false));
+setNavOpen(false);
 
 const polaroidViewer = document.querySelector(".polaroid-viewer");
 const polaroidCard = polaroidViewer?.querySelector(".polaroid-viewer__card");
