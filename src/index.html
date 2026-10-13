@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173b32">
+  <meta name="description" content="Invitación al matrimonio de Valeria y Antonio — 22 de enero de 2027.">
+  <title>Valeria & Antonio — Nos casamos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="hero" id="inicio">
+    <nav class="nav" aria-label="Navegación principal">
+      <a class="nav__monogram" href="#inicio" aria-label="Volver al inicio">V<span>&</span>A</a>
+      <div class="nav__links">
+        <a href="#detalles">Lugar</a>
+        <a href="#itinerario">Itinerario</a>
+        <a href="#informacion">Información</a>
+        <a href="#regalo">Regalos</a>
+        <a href="#confirmacion">Confirmar</a>
+      </div>
+    </nav>
+
+    <div class="hero__veil"></div>
+    <div class="hero__content">
+      <p class="eyebrow reveal">Nuestra próxima aventura</p>
+      <div class="hero__meta reveal">
+        <span>22 · 01 · 2027</span>
+      </div>
+      <h1 class="hero__title reveal">
+        <span>Valeria</span>
+        <i>&</i>
+        <span>Antonio</span>
+      </h1>
+    </div>
+    <a class="scroll-cue" href="#historia" aria-label="Bajar al contenido">
+      <span class="scroll-cue__mouse" aria-hidden="true"><i></i></span>
+    </a>
+  </header>
+
+  <main>
+    <section class="intro section" id="historia">
+      <div class="section__number">01</div>
+      <div class="intro__content reveal">
+        <p class="eyebrow">Un nuevo viaje</p>
+        <h2>Después de 13 años juntos,<br><em>nos casamos.</em></h2>
+        <p class="intro__copy">Prepara tus maletas y acompáñanos en esta nueva aventura. Queremos celebrar este día rodeados de las personas que han sido parte de nuestra historia.</p>
+        <div class="date-lockup">
+          <span class="date-lockup__day">22</span>
+          <span class="date-lockup__text">Enero<br>2027</span>
+          <span class="date-lockup__divider"></span>
+          <span class="date-lockup__time">18:30<br><small>horas</small></span>
+        </div>
+      </div>
+      <div class="journey-gallery" aria-label="Nuestra historia en fotografías">
+        <button type="button" class="journey-photo journey-photo--one reveal-photo" aria-expanded="false">
+          <span class="journey-photo__image" aria-hidden="true">
+            <img src="assets/nuevo-viaje-1.webp" alt="" width="1000" height="1333" loading="lazy" decoding="async">
+          </span>
+          <span class="journey-photo__caption"><span>01</span> Nuestros inicios</span>
+        </button>
+        <button type="button" class="journey-photo journey-photo--two reveal-photo" aria-expanded="false">
+          <span class="journey-photo__image" aria-hidden="true">
+            <img src="assets/nuevo-viaje-2.webp" alt="" width="812" height="1440" loading="lazy" decoding="async">
+          </span>
+          <span class="journey-photo__caption"><span>02</span> Unos años después</span>
+        </button>
+        <button type="button" class="journey-photo journey-photo--three reveal-photo" aria-expanded="false">
+          <span class="journey-photo__image" aria-hidden="true">
+            <img src="assets/nuevo-viaje-3.webp" alt="" width="1000" height="1333" loading="lazy" decoding="async">
+          </span>
+          <span class="journey-photo__caption"><span>03</span> Hoy</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="countdown" aria-label="Cuenta regresiva">
+      <p class="eyebrow">Faltan solamente</p>
+      <div class="countdown__grid" id="countdown">
+        <div><strong data-unit="days">000</strong><span>Días</span></div>
+        <div><strong data-unit="hours">00</strong><span>Horas</span></div>
+        <div><strong data-unit="minutes">00</strong><span>Minutos</span></div>
+        <div><strong data-unit="seconds">00</strong><span>Segundos</span></div>
+      </div>
+    </section>
+
+    <section class="details section" id="detalles">
+      <div class="section__number">02</div>
+      <div class="details__heading reveal">
+        <p class="eyebrow">Dónde nos encontraremos</p>
+        <h2>Casona<br><em>Las Delicias</em></h2>
+      </div>
+      <div class="details__card reveal">
+        <div class="details__map">
+          <iframe
+            title="Mapa de Casona Las Delicias"
+            src="https://www.google.com/maps?q=Casona+Las+Delicias,+Codegua,+Chile&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="details__info">
+          <div class="venue-detail">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+              <circle cx="12" cy="10" r="2.5"/>
+            </svg>
+            <div>
+              <h3>Dirección</h3>
+              <p>Av. la Compañía s/n esquina Las Delicias<br>Codegua, Rancagua — Sexta Región</p>
+            </div>
+          </div>
+          <div class="venue-detail">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M12 7v5l3 2"/>
+            </svg>
+            <div>
+              <h3>Distancias</h3>
+              <p>45 minutos desde Santiago por Ruta Travesía<br>10 minutos del centro de Rancagua por Av. la Compañía</p>
+            </div>
+          </div>
+          <div class="venue-detail">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m3 11 18-8-8 18-2-8-8-2Z"/>
+              <path d="m11 13 4-4"/>
+            </svg>
+            <div>
+              <h3>Acceso</h3>
+              <p>Estacionamiento privado · Acceso para personas con movilidad reducida</p>
+            </div>
+          </div>
+          <a class="button button--dark" href="https://maps.app.goo.gl/5MyH327ADwP47CGk9" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+              <circle cx="12" cy="10" r="2.5"/>
+            </svg>
+            Ver en Google Maps
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="schedule section" id="itinerario">
+      <div class="section__number section__number--light">03</div>
+      <div class="schedule__heading reveal">
+        <p class="eyebrow">Agenda del día</p>
+        <h2>Itinerario</h2>
+      </div>
+      <ol class="timeline">
+        <li class="reveal">
+          <div class="timeline__content">
+            <time>18:30</time>
+            <h3>Bienvenida</h3>
+            <p>Recibimiento y una copa para comenzar.</p>
+          </div>
+          <span class="timeline__dot"></span>
+          <div class="timeline__icon" aria-hidden="true">
+            <svg viewBox="0 0 80 80">
+              <path d="M18 14h19l-3 23c-1 8-13 8-14 0zM27 45v18M18 66h18M43 14h19l-3 23c-1 8-13 8-14 0zM52 45v18M43 66h18M20 29c5 3 10 3 15 0M45 29c5 3 10 3 15 0"/>
+              <path d="m38 17 3-6 3 6M12 21l-5-3M67 21l6-3"/>
+            </svg>
+          </div>
+        </li>
+        <li class="reveal">
+          <div class="timeline__content">
+            <time>19:00</time>
+            <h3>Ceremonia</h3>
+            <p>El momento que hemos esperado tanto.</p>
+          </div>
+          <span class="timeline__dot"></span>
+          <div class="timeline__icon" aria-hidden="true">
+            <svg viewBox="0 0 80 80">
+              <path d="M15 66V37c0-17 11-27 25-27s25 10 25 27v29M22 66V38c0-12 8-20 18-20s18 8 18 20v28M10 66h60M31 66V45h18v21"/>
+              <path d="M36 31c-8-7-14 5 4 16 18-11 12-23 4-16l-4 4z"/>
+            </svg>
+          </div>
+        </li>
+        <li class="reveal">
+          <div class="timeline__content">
+            <time>19:40</time>
+            <h3>Cóctel</h3>
+            <p>Un encuentro para brindar y compartir.</p>
+          </div>
+          <span class="timeline__dot"></span>
+          <div class="timeline__icon" aria-hidden="true">
+            <svg viewBox="0 0 80 80">
+              <path d="M15 16h50L42 43v20M30 66h24M22 24h36"/>
+              <circle cx="55" cy="17" r="8"/>
+              <path d="M51 13l8 8"/>
+            </svg>
+          </div>
+        </li>
+        <li class="reveal">
+          <div class="timeline__content">
+            <time>21:00</time>
+            <h3>Cena</h3>
+            <p>Brindis, historias y algo rico para compartir.</p>
+          </div>
+          <span class="timeline__dot"></span>
+          <div class="timeline__icon" aria-hidden="true">
+            <svg viewBox="0 0 80 80">
+              <circle cx="40" cy="40" r="21"/>
+              <circle cx="40" cy="40" r="14"/>
+              <path d="M11 13v22M7 13v13c0 6 8 6 8 0V13M11 35v32M65 13v54M65 13c-8 7-8 20 0 25"/>
+            </svg>
+          </div>
+        </li>
+        <li class="reveal">
+          <div class="timeline__content">
+            <time>22:50</time>
+            <h3>Fiesta</h3>
+            <p>Zapatos cómodos: bailamos hasta el final.</p>
+          </div>
+          <span class="timeline__dot"></span>
+          <div class="timeline__icon" aria-hidden="true">
+            <svg viewBox="0 0 80 80">
+              <path d="M40 10v18M31 14l5 16M49 14l-5 16M25 21l8 12M55 21l-8 12M19 31l12 7M61 31l-12 7"/>
+              <path d="M16 54c8-9 14-9 22 0 8 9 14 9 26 0M20 65c8-7 14-7 20 0 7 7 13 7 20 0"/>
+              <circle cx="17" cy="43" r="2"/><circle cx="63" cy="43" r="2"/><circle cx="40" cy="38" r="2"/>
+            </svg>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="music section">
+      <div class="music__vinyl-wrap reveal" aria-hidden="true">
+        <div class="music__vinyl">
+          <div><span>V <i>&</i> A</span></div>
+        </div>
+        <div class="music__arm"><i></i></div>
+        <span class="music__note music__note--one">♪</span>
+        <span class="music__note music__note--two">♫</span>
+      </div>
+      <div class="music__content reveal">
+        <p class="eyebrow">Nuestra banda sonora</p>
+        <h2>¿Qué canción no puede <em>faltar?</em></h2>
+        <p>Ayúdanos a armar la playlist perfecta para celebrar. Agrega esa canción que te hace levantarte de la silla.</p>
+        <a class="button button--accent" href="https://open.spotify.com/playlist/4Q2MR5oj2ZC1UvlcKn5QB2?si=HOJVmqtvRiGSHWMftlaDEA" target="_blank" rel="noopener">Agregar en Spotify <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="info section" id="informacion">
+      <div class="section__number">04</div>
+      <div class="info__heading reveal">
+        <p class="eyebrow">Para tener en cuenta</p>
+        <h2>Información</h2>
+      </div>
+      <div class="info__grid">
+        <article class="info-card reveal">
+          <span>01</span>
+          <svg class="info-card__icon" viewBox="0 0 80 80" aria-hidden="true">
+            <circle cx="40" cy="42" r="20"/>
+            <circle cx="40" cy="42" r="14"/>
+            <path d="M12 16v24M8 16v14c0 6 8 6 8 0V16M12 40v25M67 16v49M67 16c-8 7-8 20 0 25"/>
+            <path d="M35 39c1-9 7-14 15-15-1 8-6 14-15 15zM35 39l10-10"/>
+          </svg>
+          <h3>Alimentación</h3>
+          <p>Cuéntanos tus restricciones alimentarias al confirmar.</p>
+        </article>
+        <article class="info-card reveal">
+          <span>02</span>
+          <svg class="info-card__icon" viewBox="0 0 80 80" aria-hidden="true">
+            <path d="M13 16h24l-4 24c-2 10-14 10-16 0zM25 49v15M15 67h20M43 16h24l-4 24c-2 10-14 10-16 0zM55 49v15M45 67h20"/>
+            <path d="M17 33c6 3 11 3 17 0M47 33c6 3 11 3 17 0M36 20l8 8"/>
+            <path d="m40 12 2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+          </svg>
+          <h3>Solo adultos</h3>
+          <p>Amamos a sus pequeños, pero esta celebración será solo para adultos.</p>
+        </article>
+        <article class="info-card reveal">
+          <span>03</span>
+          <svg class="info-card__icon" viewBox="0 0 80 80" aria-hidden="true">
+            <path d="M35 18c0-8 11-8 11-1 0 5-6 5-6 10M40 27 11 48c-3 2-1 7 3 7h52c4 0 6-5 3-7z"/>
+            <path d="M25 55v10M55 55v10M20 65h40"/>
+            <path d="m31 34 9 7 9-7"/>
+          </svg>
+          <h3>Vestimenta</h3>
+          <p>Formal. Guarda el blanco para la novia y ven listo para bailar.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="gifts section" id="regalo">
+      <div class="gifts__content reveal">
+        <p class="eyebrow">Un detalle</p>
+        <h2>El mejor regalo es<br><em>tu compañía.</em></h2>
+        <p>Pero si deseas ayudarnos a comenzar esta nueva aventura, puedes elegir una experiencia para nuestro viaje.</p>
+      </div>
+      <div class="gift-options">
+        <a href="#" class="gift-card reveal">
+          <span class="gift-card__icon">⌂</span>
+          <small>Experiencia 01</small>
+          <h3>Una noche<br>en nuestro viaje</h3>
+          <span class="gift-card__arrow">↗</span>
+        </a>
+        <a href="#" class="gift-card reveal">
+          <span class="gift-card__icon">☼</span>
+          <small>Experiencia 02</small>
+          <h3>Una cena<br>para recordar</h3>
+          <span class="gift-card__arrow">↗</span>
+        </a>
+        <a href="#" class="gift-card reveal">
+          <span class="gift-card__icon">≈</span>
+          <small>Experiencia 03</small>
+          <h3>Una aventura<br>en el camino</h3>
+          <span class="gift-card__arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="rsvp section" id="confirmacion">
+      <picture class="rsvp__photo" aria-hidden="true">
+        <source media="(max-width: 640px)" srcset="assets/pareja-900.webp">
+        <img src="assets/pareja-2000.webp" alt="" width="1800" height="2400" loading="lazy" decoding="async">
+      </picture>
+      <div class="rsvp__panel reveal">
+        <p class="eyebrow">R.S.V.P.</p>
+        <h2>¿Nos acompañas?</h2>
+        <p>Confirma tu asistencia antes del 15 de diciembre de 2026.</p>
+        <a class="button button--light" href="https://forms.gle/s1nyb9AFmERcZndN8" target="_blank" rel="noopener">Confirmar asistencia <span>→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Comparte tus fotos con</p>
+    <a href="https://instagram.com" target="_blank" rel="noopener">#MatriValeNini</a>
+    <div class="footer__bottom">
+      <span>V <i>&</i> A</span>
+      <span>22 · 01 · 2027</span>
+      <a href="#inicio">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <div class="polaroid-viewer" hidden>
+    <button class="polaroid-viewer__backdrop" type="button" aria-label="Devolver la foto"></button>
+    <div class="polaroid-viewer__card journey-photo" role="dialog" aria-modal="true" tabindex="-1">
+      <div class="journey-photo__image"></div>
+      <p class="journey-photo__caption"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
