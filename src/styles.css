@@ -687,8 +687,9 @@ h2 em {
 .gift-card h3 { margin: 0; font-family: var(--serif); font-size: 24px; font-weight: 400; line-height: 1.2; }
 .gift-card__arrow { position: absolute; right: 20px; bottom: 25px; font-size: 18px; }
 
-/* RSVP */
-.rsvp { display: grid; grid-template-columns: 1.25fr .75fr; min-height: 750px; padding: 0; }
+/* RSVP — sin padding de .section para foto y panel a borde */
+.rsvp.section { padding: 0; }
+.rsvp { display: grid; grid-template-columns: 1.25fr .75fr; min-height: 750px; }
 .rsvp__photo {
   display: block;
   min-height: 680px;
