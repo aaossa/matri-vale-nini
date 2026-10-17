@@ -49,7 +49,7 @@ def build() -> None:
         shutil.rmtree(DIST)
     DIST_ASSETS.mkdir(parents=True)
 
-    for filename in ("index.html", "styles.css", "script.js"):
+    for filename in ("index.html", "regalos.html", "styles.css", "script.js", "regalos.js"):
         shutil.copy2(SOURCE / filename, DIST / filename)
     (DIST / ".nojekyll").touch()
 

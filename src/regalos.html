@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173b32">
+  <meta name="description" content="Mesa de regalos simbólicos para el matrimonio de Valeria y Antonio — 22 de enero de 2027.">
+  <title>Mesa de regalos — Valeria & Antonio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="registry-hero" id="inicio">
+    <nav class="nav" aria-label="Navegación principal">
+      <a class="nav__monogram" href="index.html" aria-label="Volver a la invitación">V<span>&</span>A</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+        <span class="nav__toggle-lines" aria-hidden="true"></span>
+      </button>
+      <div class="nav__links" id="nav-menu">
+        <a href="index.html#detalles">Lugar</a>
+        <a href="index.html#itinerario">Itinerario</a>
+        <a href="index.html#informacion">Información</a>
+        <a href="#regalos" aria-current="page">Regalos</a>
+        <a href="index.html#confirmacion">Confirmar</a>
+      </div>
+    </nav>
+
+    <div class="registry-hero__content reveal">
+      <p class="eyebrow">Mesa de regalos</p>
+      <h1>Regalos que no caben<br><em>en una caja.</em></h1>
+      <p>Tu compañía es lo más importante. Si además quieres hacernos un regalo, elige uno de estos destinos simbólicos: cada uno se transforma en un aporte para comenzar esta nueva aventura juntos.</p>
+    </div>
+    <a class="registry-hero__stamp" href="#regalos" aria-label="Ver los regalos">
+      <span>22 · 01 · 2027</span>
+      <i>V&amp;A</i>
+    </a>
+  </header>
+
+  <main>
+    <section class="registry section" id="regalos">
+      <div class="section__number">01</div>
+      <div class="registry__heading reveal">
+        <p class="eyebrow">Elige tu destino</p>
+        <h2>Pases de <em>abordar</em></h2>
+      </div>
+
+      <div class="registry__toolbar" hidden>
+        <div class="registry__filters" role="group" aria-label="Filtrar regalos por categoría">
+          <button type="button" class="chip is-active" data-filter="todos" aria-pressed="true">Todos</button>
+          <button type="button" class="chip" data-filter="Aventuras" aria-pressed="false">Aventuras</button>
+          <button type="button" class="chip" data-filter="Momentos" aria-pressed="false">Momentos</button>
+          <button type="button" class="chip" data-filter="Hogar" aria-pressed="false">Hogar</button>
+          <button type="button" class="chip" data-filter="Imposibles" aria-pressed="false">Imposibles</button>
+        </div>
+      </div>
+      <p class="visually-hidden" id="gift-status" role="status"></p>
+
+      <ul class="registry__grid" id="gift-grid"></ul>
+    </section>
+
+    <section class="free-amount section">
+      <div class="free-amount__content reveal">
+        <p class="eyebrow">Tu propio itinerario</p>
+        <h2>¿Prefieres elegir<br><em>tú el monto?</em></h2>
+        <p>También puedes hacer un aporte libre, del valor que tú quieras. Todo suma para nuestra próxima aventura.</p>
+        <a class="button button--light" href="https://fintoc.me/aaossa" target="_blank" rel="noopener">Elegir monto <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="registry-thanks section">
+      <div class="registry-thanks__content reveal">
+        <p class="eyebrow">Gracias</p>
+        <h2>Gracias por ser parte<br><em>de nuestra historia.</em></h2>
+        <p>Cada regalo, simbólico o no, lo recibiremos con mucho cariño. Nos vemos el 22 de enero.</p>
+        <a class="button button--dark" href="index.html">Volver a la invitación <span>←</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Comparte tus fotos con</p>
+    <a href="https://instagram.com" target="_blank" rel="noopener">#MatriValeNini</a>
+    <div class="footer__bottom">
+      <span>V <i>&</i> A</span>
+      <span>22 · 01 · 2027</span>
+      <a href="#inicio">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script src="regalos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
