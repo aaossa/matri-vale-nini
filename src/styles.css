@@ -108,7 +108,7 @@ h2 em {
   font-family: var(--serif);
   font-size: 25px;
 }
-.nav__monogram span, .footer i { font-family: Georgia, serif; font-style: italic; }
+.nav__monogram span, .footer i, .registry-hero__stamp i span { font-family: Georgia, serif; font-style: italic; }
 .nav__links { display: flex; gap: 36px; }
 .nav__links a {
   position: relative;
@@ -774,7 +774,7 @@ h2 em {
   transition: transform .4s ease;
 }
 .registry-hero__stamp:hover { transform: rotate(-4deg) scale(1.04); }
-.registry-hero__stamp span { font-size: 9px; font-weight: 500; letter-spacing: .2em; }
+.registry-hero__stamp > span { font-size: 9px; font-weight: 500; letter-spacing: .2em; }
 .registry-hero__stamp i { color: var(--accent); font-family: var(--serif); font-size: 34px; font-style: normal; }
 .nav__links a[aria-current="page"]::after { right: 0; }
 
@@ -1165,7 +1165,7 @@ h2 em {
   .registry-hero h1 { font-size: clamp(48px, 15vw, 78px); }
   .registry-hero__content > p:not(.eyebrow) { font-size: 15px; }
   .registry-hero__stamp { right: 24px; bottom: 44px; width: 104px; height: 104px; }
-  .registry-hero__stamp span { font-size: 7px; }
+  .registry-hero__stamp > span { font-size: 7px; }
   .registry-hero__stamp i { font-size: 24px; }
   h1, h2 { text-wrap: balance; }
   .free-amount h2 { font-size: 48px; }
