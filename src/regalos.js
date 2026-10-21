@@ -1,35 +1,21 @@
 const PAYMENT_URL = "https://fintoc.me/aaossa";
 
 const gifts = [
-  { name: "Un viaje a la luna", note: "Ida y vuelta, con escala en las estrellas.", category: "Imposibles", amount: 150000, icon: "moon" },
-  { name: "Un desayuno con vista al mar", note: "Café, marraqueta y el sonido de las olas.", category: "Momentos", amount: 30000, icon: "sunrise" },
-  { name: "Un paseo en globo sobre Capadocia", note: "Despegue al amanecer.", category: "Aventuras", amount: 100000, icon: "balloon" },
-  { name: "Café para un año de mañanas juntos", note: "Para empezar cada día con energía.", category: "Hogar", amount: 25000, icon: "coffee" },
-  { name: "Una noche bajo las estrellas de Atacama", note: "El cielo más limpio del mundo.", category: "Aventuras", amount: 80000, icon: "tent" },
-  { name: "Una cena a la luz de las velas", note: "Mesa para dos, sin apuro.", category: "Momentos", amount: 50000, icon: "candle" },
-  { name: "Ver auroras boreales desde una cabaña", note: "Chocolate caliente incluido.", category: "Imposibles", amount: 120000, icon: "aurora" },
-  { name: "Una planta que prometemos no matar", note: "Esta vez sí la vamos a regar.", category: "Hogar", amount: 15000, icon: "plant" },
-  { name: "Una ruta en auto con parada en cada mirador", note: "Playlist del matrimonio de fondo.", category: "Aventuras", amount: 60000, icon: "car" },
-  { name: "Una tarde de vinos en el valle", note: "Un brindis por los próximos años.", category: "Momentos", amount: 40000, icon: "wine" },
-  { name: "Clases de baile para no pisarnos en la fiesta", note: "Por el bien de nuestros pies.", category: "Imposibles", amount: 35000, icon: "dance" },
-  { name: "Un picnic de domingo", note: "Mantel, sol y nada de prisa.", category: "Momentos", amount: 20000, icon: "picnic" },
-  { name: "Pizza y película para un viernes", note: "Nosotros elegimos la película.", category: "Hogar", amount: 15000, icon: "pizza" },
+  { name: "La verdadera pizza en Nápoles", note: "Masa madre, albahaca fresca y una cerveza bien fría en el corazón de Italia.", category: "Aventuras", amount: 80000, icon: "pizza" },
+  { name: "Ramen y sake en Tokio", note: "Perdernos entre los neones de Shinjuku para probar el mejor ramen de la ciudad.", category: "Aventuras", amount: 110000, icon: "ramen" },
+  { name: "Buceo en San Andrés", note: "Sumergirnos en las aguas cristalinas del Mar de los 7 Colores para explorar sus arrecifes.", category: "Aventuras", amount: 140000, icon: "scuba" },
+  { name: "Brindis al atardecer en Santorini", note: "Cocteles y vino griego contemplando la famosa puesta de sol sobre las cúpulas azules de Oia.", category: "Momentos", amount: 160000, icon: "sunset" },
+  { name: "Sesión de fotos en Nueva York", note: "Un fotógrafo local capturando nuestros mejores ángulos entre Central Park y Brooklyn.", category: "Momentos", amount: 180000, icon: "camera" },
+  { name: "Cena romántica en la Torre Eiffel", note: "Un brindis con champaña y la mejor vista nocturna de las luces de París.", category: "Momentos", amount: 220000, icon: "champagne" },
 ];
 
 const icons = {
-  moon: '<path d="M50 12a28 28 0 1 0 18 46A24 24 0 0 1 50 12Z"/><path d="m22 20 2 5 5 2-5 2-2 5-2-5-5-2 5-2zM62 30l1 3 3 1-3 1-1 3-1-3-3-1 3-1z"/>',
-  sunrise: '<path d="M22 50a18 18 0 0 1 36 0M40 18v8M18 28l6 6M62 28l-6 6M10 50h60"/><path d="M12 60c6-5 10-5 16 0s10 5 16 0 10-5 16 0 6 4 8 2M18 70c5-4 9-4 14 0s9 4 14 0 9-4 14 0"/>',
-  balloon: '<path d="M40 10c-14 0-24 10-24 23 0 13 14 22 20 30h8c6-8 20-17 20-30 0-13-10-23-24-23Z"/><path d="M40 10c-6 6-9 15-9 23s4 20 5 30M40 10c6 6 9 15 9 23s-4 20-5 30M34 63h12v9H34z"/>',
-  coffee: '<path d="M16 34h40v14c0 11-9 18-20 18s-20-7-20-18zM56 38h4c6 0 8 4 8 8s-3 8-9 8h-5M12 70h48"/><path d="M28 14c-4 4 4 8 0 12M38 12c-4 4 4 8 0 12M48 14c-4 4 4 8 0 12"/>',
-  tent: '<path d="M10 66 40 22l30 44zM40 22v44M32 66l8-14 8 14M6 66h68"/><path d="m18 14 1 3 3 1-3 1-1 3-1-3-3-1 3-1zM58 10l1 3 3 1-3 1-1 3-1-3-3-1 3-1zM66 26h.1M48 12h.1"/>',
-  candle: '<path d="M32 36h16v32H32zM24 68h32"/><path d="M40 12c-5 6-6 10-6 13a6 6 0 0 0 12 0c0-3-1-7-6-13ZM40 30v6"/><path d="M18 30l-6-3M62 30l6-3M20 18l-4-5M60 18l4-5"/>',
-  aurora: '<path d="M8 66l18-24 10 12 12-18 24 30z"/><path d="M8 26c10-10 20 4 32-6s22-4 32-12M8 36c12-8 22 4 34-4s20-2 30-8"/><path d="M30 66v-8h8v8"/>',
-  plant: '<path d="M26 50h28l-4 20H30zM22 50h36"/><path d="M40 50V24M40 34c-4-12-16-14-20-12 2 10 10 14 20 12ZM40 28c4-12 16-14 20-12-2 10-10 14-20 12Z"/>',
-  car: '<path d="M10 52V40l8-14h34l10 14h8v12zM18 26l-2 14h46"/><circle cx="24" cy="54" r="6"/><circle cx="56" cy="54" r="6"/><path d="M6 68h68"/>',
-  wine: '<path d="M18 12h18l-2 18c-1 8-13 8-14 0zM27 38v24M18 66h18"/><path d="M50 30h12v36H50zM52 30v-8h8v8M53 18h6M50 44h12"/>',
-  dance: '<path d="M18 50c6-2 14-2 18 4l-2 8H14c-2-4 0-10 4-12ZM14 62h20"/><path d="M44 46c6 0 16 2 20 10l-2 6H42zM42 62h22M60 56l2 12"/><path d="M30 14v18a5 5 0 1 1-4-5M30 14l14-4v18a5 5 0 1 1-4-5"/>',
-  picnic: '<path d="M14 40h52l-6 28H20zM22 40c0-14 8-22 18-22s18 8 18 22"/><path d="M17 52h46M26 40l4 28M40 40v28M54 40l-4 28"/>',
   pizza: '<path d="M12 22c18-10 38-10 56 0L40 70z"/><path d="M16 30c16-8 32-8 48 0"/><circle cx="32" cy="38" r="3"/><circle cx="46" cy="42" r="3"/><circle cx="40" cy="54" r="3"/>',
+  ramen: '<path d="M10 40h60c0 15-13 26-30 26S10 55 10 40ZM28 66v4h24v-4"/><path d="M20 40c0-6 4-10 9-10s9 4 9 10M38 40c0-5 4-8 8-8s8 3 8 8"/><path d="m30 32 40-22M36 34l36-16"/><path d="M18 22c-3 3 3 6 0 9M26 18c-3 3 3 6 0 9"/>',
+  scuba: '<path d="M10 28h50v16c0 6-4 10-10 10h-6l-6-6h-4l-6 6h-8c-6 0-10-4-10-10z"/><path d="M35 28v20"/><path d="M68 20v30c0 10-8 16-18 16h-6"/><circle cx="58" cy="12" r="3"/><circle cx="50" cy="8" r="2"/>',
+  sunset: '<path d="M50 40a12 12 0 0 1 24 0M62 18v6M48 24l4 4M76 24l-4 4"/><path d="M8 68V44h26v24M8 44a13 13 0 0 1 26 0M21 31v-8M17 26h8"/><path d="M38 68V52h22v16M45 68v-7h8v7M4 68h72"/>',
+  camera: '<path d="M10 28h14l6-8h20l6 8h14v38H10z"/><circle cx="40" cy="46" r="12"/><circle cx="40" cy="46" r="5"/><path d="M60 36h4"/>',
+  champagne: '<path d="M14 18h14l-2 22c-1 6-9 6-10 0zM21 46v18M14 66h14"/><path d="M52 18h14l-2 22c-1 6-9 6-10 0zM59 46v18M52 66h14"/><path d="M15 28h12M53 28h12"/><path d="M40 8v8M32 12l3 4M48 12l-3 4"/>',
 };
 
 const currency = new Intl.NumberFormat("es-CL", { style: "currency", currency: "CLP", maximumFractionDigits: 0 });
