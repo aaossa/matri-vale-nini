@@ -825,7 +825,7 @@ h2 em {
 .chip:focus-visible { outline: 2px solid var(--coral); outline-offset: 3px; }
 .registry__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   max-width: 1180px;
   margin: 0 auto;
@@ -1033,6 +1033,7 @@ h2 em {
   .registry-hero { min-height: 0; padding-bottom: 220px; }
   .registry-hero__stamp { bottom: 50px; width: 120px; height: 120px; }
   .registry-hero__stamp i { font-size: 28px; }
+  .registry__grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 640px) {
